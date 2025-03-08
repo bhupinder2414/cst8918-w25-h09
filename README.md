@@ -7,7 +7,6 @@ Other team members have completed the application code and have provided you wit
 ## Project Overview
 
 The project aims to automate the infrastructure setup for a Kubernetes cluster on Azure using Terraform. It includes the following resources:
-The AKS cluster should be created with the following configurations:
 
 - A minimum of 1 node and a maximum of 3 nodes.
 - Created in a new resource group.
