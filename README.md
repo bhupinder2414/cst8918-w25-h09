@@ -1,4 +1,4 @@
-# Hybrid-H09-AKS Terraform Project
+# Hybrid-H09 Azure Kubernetes Service (AKS) Cluster with Terraform
 
 ## Background
 As the Systems Engineer on your product development team, you have been tasked with creating an Azure Kubernetes Service (AKS) cluster using Terraform. The AKS cluster will be used to deploy a sample application that includes a frontend (using Vue), two backend services (one built with Node.js, one with Rust), and a message broker (RabbitMQ).
