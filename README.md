@@ -52,7 +52,20 @@ Once you're satisfied with the plan, apply the changes to your Azure environment
 ```bash
 terraform apply
 ```
+- Once the Terraform apply is complete, Terraform will output the kube_config information.
+### 6 Set Up Kubernetes Configuration
+- Export the kubeconfig: Use the output from Terraform to configure kubectl for your AKS cluster.
+```bash
+  echo "$(terraform output kube_config)" > ./kubeconfig
+  export KUBECONFIG=./kubeconfig
+```
+- Verify connection: Run the following command to check that you can connect to the AKS cluster.
+```bash
+   kubectl get nodes
+```
+- If successful, it will list the nodes in the AKS cluste
 ### 6. Deploy the application
+- Deploy the application to AKS: Run the following command to apply the deployment configurations:
 ```bash
 kubectl apply -f sample-app.yaml
 ```
